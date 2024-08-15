@@ -172,22 +172,74 @@ namespace Assignment
             //{
             //    Console.WriteLine(order);
             //}
-                #endregion
-                #endregion
-
-                #region
-                #endregion
-                #region
-                #endregion
-                #region
-                #endregion
-                #region
-                #endregion
-                #region
-                #endregion
-                #region
-                #endregion
-
-            }
+            #endregion
+            #endregion
+            #region LINQ - Set Operators
+            #region Q1
+            //1. Find the unique Category names from Product List
+            //var uniqueCategories = ProductList.Select(p => p.Category).Distinct().ToList();
+            //foreach (var category in uniqueCategories)
+            //{
+            //    Console.WriteLine(category);
+            //}
+            #endregion
+            #region Q2 
+            //2. Produce a Sequence containing the unique first letter from both product and customer names.
+            //var uniqueFirstLetters = ProductList.Select(p => p.ProductName[0]).Union(CustomerList.Select(c => c.CustomerName[0])).Distinct().ToList();
+            //foreach (var name in uniqueFirstLetters) {
+            //    Console.WriteLine(name);
+            //}
+            #endregion
+            #region Q3
+            //3. Create one sequence that contains the common first letter from both product and customer names.
+            //var commonFirstLetters = ProductList.Select(p => p.ProductName[0]).Intersect(CustomerList.Select(c => c.CustomerName[0])).ToList();
+            //foreach (var c in commonFirstLetters)
+            //{
+            //    Console.WriteLine(c);
+            //}
+            #endregion
+            #region Q4
+            //4. Create one sequence that contains the first letters of product names that are not also first letters of customer names.
+            //var exclusiveProductFirstLetters = ProductList.Select(p => p.ProductName[0]).Except(CustomerList.Select(c => c.CustomerName[0])).ToList();
+            //foreach (var product in exclusiveProductFirstLetters) 
+            //{
+            //    Console.WriteLine(product);
+            //}
+            #endregion
+            #region Q5
+            //5. Create one sequence that contains the last Three Characters in each name of all customers and products, including any duplicates.
+            /***/var lastThreeCharacters = ProductList.Select(p => p.ProductName.Length >= 3 ? p.ProductName[^3..] : p.ProductName)
+                                     .Concat(CustomerList.Select(c => c.CustomerName.Length >= 3 ? c.CustomerName[^3..] : c.CustomerName)).ToList();
+            #endregion
+            #endregion
+            #region LINQ - Partitioning Operators
+            #region Q1
+            #endregion
+            #region Q2 
+            #endregion
+            #region Q3
+            #endregion
+            #region Q4
+            #endregion
+            #region Q5
+            #endregion
+            #endregion
+            #region LINQ - Quantifiers
+            #region Q1
+            #endregion
+            #region Q2 
+            #endregion
+            #region Q3
+            #endregion
+            #endregion
+            #region LINQ – Grouping Operators
+            #region Q1
+            #endregion
+            #region Q2 
+            #endregion
+            #region Q3
+            #endregion
+            #endregion
+        }
     }
 }
